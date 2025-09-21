@@ -1,0 +1,25 @@
+int main() {
+    int rows, cols, terms;
+    cin >> rows >> cols >> terms;
+
+    int triplet[terms][3];
+    for(int i=0;i<terms;i++)
+        cin >> triplet[i][0] >> triplet[i][1] >> triplet[i][2];
+
+    int trans[terms][3];
+    trans[0][0] = triplet[0][1];
+    trans[0][1] = triplet[0][0];
+    trans[0][2] = triplet[0][2];
+
+    int t=1;
+    for(int col=0; col<cols; col++)
+        for(int i=1;i<terms;i++)
+            if(triplet[i][1]==col){
+                trans[t][0]=triplet[i][1];
+                trans[t][1]=triplet[i][0];
+                trans[t][2]=triplet[i][2];
+                t++;
+            }
+
+    for(int i=0;i<terms;i++)
+        cout << trans[i][0] << " " << trans[i][1] << " " << trans[i][2] << endl;
