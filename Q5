@@ -1,0 +1,159 @@
+#include<iostream> //sparse matrix     
+using namespace std;
+
+/* int main(){   //        1)
+    cout<<"enter number of order in a square matrix"<<endl;   //order of matrix
+    int n;
+    cin>>n;
+    int arr[n][n];
+    for (int i = 1; i <= n; i++)         //create sparse matrix
+    {
+        for (int j = 1; j <=n ; j++)
+        {
+            if (i==j)
+            {
+                cout<<"enter value of array index "<<i<<i<<endl;
+                cin>>arr[i][j];
+            }   
+            else
+            {
+                arr[i][j]=0;
+            }
+        }
+    }
+    
+    for (int i = 1; i <= n; i++)     //display matrix
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            cout<<arr[i][j]<<" ";
+        }
+      cout<<endl;}
+}    */
+
+
+int main(){   //        2) Tri diagonal matrix
+    cout<<"enter number of order in a square matrix"<<endl;   //order of matrix
+    int n;
+    cin>>n;
+    int arr[n][n];
+    for (int i = 1; i <= n; i++)         //create trigonal matrix
+    {
+        for (int j = 1; j <=n ; j++)
+        {
+            if (i==j)
+            {
+                cout<<"enter value of array index "<<i<<i<<endl;
+                cin>>arr[i][j];
+            }  
+            else if (i==(j+1))
+            {
+                cout<<"enter value of array index "<<i<<j<<endl;
+                cin>>arr[i][j];
+            }
+            else if (j==(i+1))
+            {
+               cout<<"enter value of array index "<<i<<j<<endl;
+               cin>>arr[i][j];
+            }
+            else
+            {
+                arr[i][j]=0;
+            }
+        }
+    }
+    
+    for (int i = 1; i <= n; i++)     //display matrix
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            cout<<arr[i][j]<<" ";
+        }
+      cout<<endl;}
+      return 0;
+}    
+
+
+/*int main(){                   //    3)
+cout<<"enter number of order in a square matrix"<<endl;   //order of matrix
+    int n;
+    cin>>n;
+    int arr[n][n];
+    for (int i = 1; i <= n; i++)         //create lower triangular matrix
+    {
+        for (int j = 1; j <=n ; j++)
+        {
+            if (j<=i)
+            {
+                cout<<"enter value of array index "<<i<<j<<endl;
+                cin>>arr[i][j];
+            }   
+            else
+            {
+                arr[i][j]=0;
+            }
+        }
+    }
+    
+    for (int i = 1; i <= n; i++)     //display matrix
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            cout<<arr[i][j]<<" ";
+        }
+      cout<<endl;}
+}    */
+
+/*int main(){       //4)
+cout<<"enter number of order in a square matrix"<<endl;   //order of matrix
+    int n;
+    cin>>n;
+    int arr[n][n];
+    for (int i = 1; i <= n; i++)         //create upper triangular matrix
+    {
+        for (int j = 1; j <=n ; j++)
+        {
+            if (j>=i)
+            {
+                cout<<"enter value of array index "<<i<<j<<endl;
+                cin>>arr[i][j];
+            }   
+            else
+            {
+                arr[i][j]=0;
+            }
+        }
+    }
+    
+    for (int i = 1; i <= n; i++)     //display matrix
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            cout<<arr[i][j]<<" ";
+        }
+      cout<<endl;}} */
+
+
+   /*  int main(){       //  5) symmetric matrix
+    cout<<"enter number of order in a square matrix"<<endl;   //order of matrix
+    int n;
+    cin>>n;
+    int arr[n][n];
+    for (int i = 1; i <= n; i++)         //create symmetric  matrix
+    {
+        for (int j = 1; j <=i ; j++)
+        {
+             cout<<"enter values of symmetric matrix "<<i<<j<<endl;
+             cin>>arr[i][j]; 
+             arr[j][i]=arr[i][j];   
+        }
+           }
+    
+    for (int i = 1; i <= n; i++)     //display matrix
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            cout<<arr[i][j]<<" ";
+        }
+      cout<<endl;}
+}  */
